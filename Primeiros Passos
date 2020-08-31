@@ -37,3 +37,7 @@ define( 'DB_CHARSET', 'utf8' );
 
 /** O tipo de Collate do banco de dados. Não altere isso se tiver dúvidas. */
 define( 'DB_COLLATE', '' );
+
+
+Acessa como client
+http://192.168.201.116:8080/WP-Com-Elementor/alura-viagens/
