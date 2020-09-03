@@ -1,0 +1,54 @@
+-- Apache 
+
+1 Passo
+
+Criar diretorio  dentro de /var/www
+mkdir wordpress
+
+2 Passo
+Dowload Worpress
+dentro do diretorio wordpress 
+wget  https://br.wordpress.org/latest-pt_BR.tar.gz
+
+3 passo extrair
+
+tar -zxf wordpress....
+
+4 passo entrar no diretorio Apache
+cd /etc/apache2
+obs configuracão e feita no sites-aviable
+cd sites-aviable
+
+copiar o arquivo 000-default.config
+
+cp 000-default.config wordpress.conf
+
+editar o arquivo Worpress.conf
+
+<VirtualHost *:80>
+ServerAdmin admin@example.com
+DocumentRoot /var/www/html/moodle/
+ServerName moodle.univale.br
+ServerAlias www.moodle.univale.br
+<Directory /var/www/html/moodle/>
+Options FollowSymLinks
+AllowOverride All
+Order allow,deny
+allow from all
+</Directory>
+ErrorLog /var/log/httpd/moodle.example.com-error_log
+CustomLog /var/log/httpd/moodle.example.com-access_log common
+</VirtualHost>
+
+-- Permisao de escrita Apache
+
+No diretorio /var /www
+
+chown www-data:www-data  wordpress - R
+chmod 775 wordpress -R
+
+Ativando um site 
+
+a2ensite wordpress.conf
+
+service apache2 reload 
