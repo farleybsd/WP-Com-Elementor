@@ -1,0 +1,13 @@
+Resumo de Funções:
+
+Super Admin – Alguém com acesso à administração da rede do blog, possuindo o controle de toda a rede.
+
+Administrador – Alguém que tem acesso a quase todas as funcionalidades de administração.
+
+Editor – Alguém que possa publicar e gerenciar posts e páginas, bem como gerenciar posts de outros usuários, etc.
+
+Autor – Alguém que possa publicar e gerenciar suas próprias posts.
+
+Colaborador – Alguém que pode escrever e gerenciar suas posts, mas não publicá-las.
+
+Assinante – Alguém que só pode gerir seu próprio perfil.
